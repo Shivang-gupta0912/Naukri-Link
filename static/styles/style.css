@@ -1,0 +1,476 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: rgb(121, 220, 225);
+    background: linear-gradient(90deg, rgba(121, 220, 225, 1) 0%, rgba(32, 121, 251, 1) 100%);
+    border: solid black 3px;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: black;
+    font-weight: 800;
+
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    mix-blend-mode: color-burn;
+    filter: drop-shadow(10px 10px 20px black);
+}
+
+.navlist {
+    display: flex;
+
+}
+
+.navlist a {
+    display: inline-block;
+    margin: 0 35px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .50s ease;
+
+}
+
+.navlist a:hover {
+    text-shadow: 5px 5px 25px #000, -2px 1px 30px #fff700;
+
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    border-radius: 10px;
+    margin-right: 12px;
+    transition: all 6s ease;
+}
+
+.btn:hover {
+    background: #0c0c0c;
+    color: #fff;
+    box-shadow: 0 0 20px #070707;
+    transform: scale(1.1);
+}
+
+#menu-icon {
+    font-size: 34px;
+    color: #fff;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(121, 220, 225, 1) 0%, rgba(32, 121, 251, 1) 100%);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+@media(max-width:1300px) {
+    header {
+        padding: 20px 4%;
+    }
+}
+
+@media (max-width:1050px) {
+    .logo {
+        font-size: 45 px;
+    }
+
+    .logo img {
+        width: 40;
+        height: auto;
+    }
+
+    .navlist a {
+        margin: 0 25px;
+    }
+
+    .btn {
+        padding: 11px 23px;
+    }
+
+    .container h1 {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width:940px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navlist {
+        position: absolute;
+        top: 0;
+        right: -100px;
+        ;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(32px);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 180px;
+        transition: all 0.6s ease;
+    }
+
+    .navlist a {
+        display: block;
+        padding: 0;
+        margin: 0px 0px 50px 0px;
+        font-size: 1.7rem;
+
+    }
+
+    .navlist.open {
+        right: 0;
+    }
+}
+
+
+
+.image-container {
+    margin-top: 1.0in;
+    /* Adds 1.0 inches of margin below the navigation bar */
+    text-align: center;
+    /* Centers the image horizontally */
+}
+
+.image-container img {
+    width: 100%;
+    /* Ensures the image does not exceed the width of the viewport */
+    height: 5.0in;
+    /* Maintains the aspect ratio of the image */
+
+}
+
+/* Responsive styles for different devices */
+@media (max-width: 1024px) {
+    .image-container img {
+        width: 80%;
+        /* Reduces the width of the image for medium-sized screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container img {
+        width: 90%;
+        /* Further reduces the width of the image for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container img {
+        width: 95%;
+        /* Maximizes the use of space on very small screens */
+    }
+}
+
+
+.naukari-link-text {
+    margin-top: 20px;
+    /* Adds spacing between the image and the text */
+    text-align: center;
+    /* Centers the text horizontally */
+    font-size: 2.5rem;
+    /* Sets a large font size */
+    font-weight: bold;
+    /* Makes the text bold */
+    font-family: 'Arial', sans-serif;
+    /* Use a clean, stylish font */
+    color: #000;
+    /* Text color (black in this case) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(255, 255, 255, 0.7);
+    /* Adds a shadow effect */
+    animation: fadeIn 3s ease-in;
+    /* Adds a fade-in animation for style */
+}
+
+/* Fade-in animation for the text */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .naukari-link-text {
+        font-size: 1.8rem;
+        /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .naukari-link-text {
+        font-size: 1.5rem;
+        /* Further reduce font size for very small screens */
+    }
+}
+
+
+
+
+
+
+
+
+.office-setup-container {
+    display: flex;
+    align-items: right;
+    /* Align vertically */
+    justify-content: flex-start;
+    /* Align items to the left */
+    gap: 180px;
+    /* Space between image and text */
+    padding: 40px;
+    /* Add some padding around */
+}
+
+.office-setup {
+    width: 350px;
+    /* Adjust size as needed */
+    justify-content: left;
+    align-items: left;
+    height: auto;
+    display: block;
+    margin: 20px 50px;
+    /* Centering */
+
+}
+
+
+.office-setup.one-time {
+    animation: fadeZoomIn 1.5s ease-in-out;
+}
+
+/* Looping Animation: Continuous Pulse Effect */
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.office-setup.loop {
+    animation: pulseEffect 2s infinite;
+}
+
+
+
+.animated-text {
+
+    width: 50%;
+    /* Allow text to take the remaining space */
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: fadeInRight 1.5s ease-in-out forwards;
+}
+
+/* Animation */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Job Recruiter Heading Animation */
+.animated-heading {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffe600;
+    text-align: right;
+    margin-right: 60px;
+    margin-top: 30px;
+    animation: seekerGlow 2s ease-in-out infinite alternate;
+}
+
+/* Glow animation effect */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #ffffff, 0 0 30px #ffffff;
+    }
+}
+
+.recruiter-content {
+    max-width: 600px;
+    margin: 20px 40px 40px auto;
+    /* Right side of the screen */
+    text-align: left;
+}
+
+/* Paragraph remains same */
+.recruiter-paragraph {
+    color: #dddddd;
+    font-size: 1.1em;
+    text-align: left;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.recruiter-paragraph-wrapper {
+    max-width: 600px;
+    margin: 20px 0 40px 40px;
+    /* Left-aligned with space below */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Ensures left alignment of both */
+}
+
+.recruiter-paragraph {
+    color: #dddddd;
+    font-size: 1.1em;
+    text-align: left;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.fancy-btn-small {
+    display: inline-block;
+    padding: 18px 52px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.fancy-btn-small:hover {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+.fancy-btn-small {
+    position: relative;
+    left: 5in;
+    /* Shifts the button exactly 7 inches */
+}
+
+
+/* Animated Heading for Job Seeker */
+.animated-heading-seeker {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #0606f0;
+    margin-left: 50px;
+    text-align: left;
+    margin-top: 40px;
+    animation: seekerGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes seekerGlow {
+    0% {
+        text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #242726, 0 0 30px #1f2322;
+    }
+}
+
+/* Right-aligned paragraph for Job Seeker */
+.recruiter-paragraph-seeker {
+    color: #000000;
+    font-size: 1.1em;
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto 20px 40px;
+    padding: 0 20px;
+    line-height: 1.6;
+    animation: fadeInRight 1.0s ease-in-out forwards;
+}
+
+.seeker-btn {
+    display: inline-block;
+    padding: 18px 52px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: rgb(6, 6, 6);
+    font-size: 24px;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-left: 10in;
+    margin-top: 2px;
+}

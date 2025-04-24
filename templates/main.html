@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Naukari Link - Find Your Dream Job</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">
+            <img src="{% static 'images/Updated Logo.png' %}" alt="Logo"> N
+        </a>
+
+        <!-- Navigation Bar -->
+        <ul class="navlist">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Get Job</a></li>
+            <li><a href="#">Hire</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="#" class="btn">Sign In</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <!-- Banner Image -->
+    <div class="image-container">
+        <img src="{% static 'images/Naukari Link Black Image.png' %}" alt="Naukari Link Black">
+    </div>
+
+    <!-- Title -->
+    <div class="naukari-link-text">
+        Naukari Link
+    </div>
+
+    <!-- Office Setup Section -->
+    <div class="office-setup-container">
+        <img src="{% static 'images/Office Setup.png' %}" alt="Office Setup" class="office-setup loop">
+
+        <div class="animated-text">
+            <h2 style="color:#ffe600;">"WE LINK YOU WITH YOUR DREAM JOB"</h2>
+            <p>
+                Naukari Link is a simple and easy-to-use platform that helps people find jobs and employers find the
+                right candidates. It connects job seekers with companies looking for skilled workers. If you are
+                looking for a job, you can search for opportunities that match your skills and experience. If you are
+                an employer, you can find the best people for your company quickly. Naukari Link makes the hiring
+                process fast, smooth, and stress-free for everyone. Whether you are starting your career or changing
+                jobs, Naukari Link helps you find the perfect match.
+            </p>
+        </div>
+    </div>
+
+    <!-- Job Recruiter Section -->
+    <div class="job-recruiter-section">
+        <h2 class="animated-heading">Job Recruiter</h2>
+        <p class="recruiter-content">
+            Job recruiters are professionals or employers responsible for finding and hiring suitable candidates for
+            job openings. They post vacancies, screen applicants, conduct interviews, and coordinate the hiring
+            process. In the Naukari Link Website, recruiters register, post jobs, search candidates, and manage
+            applications, helping bridge the gap between job seekers and companies by ensuring the right talent meets
+            the right opportunity.
+        </p>
+        <a href="/post-job/" class="fancy-btn-small">Post Job</a>
+    </div>
+
+    <!-- Job Seeker Section -->
+    <div class="job-seeker-section">
+        <h2 class="animated-heading-seeker">Job Seeker</h2>
+        <p class="recruiter-paragraph-seeker">
+            Job seekers are individuals actively looking for employment opportunities to start or advance their
+            careers. They search for jobs that match their skills, qualifications, and interests. On platforms like
+            Naukari Link, job seekers can create profiles, upload resumes, browse job listings, and apply for
+            positions. They play a crucial role in the recruitment process by connecting with potential employers and
+            showcasing their abilities.
+        </p>
+        <a href="https://forms.gle/D1M2RoMoUKMKTAZ18" class="seeker-btn">Find Jobs</a>
+    </div>
+
+    <!-- Just-for-fun Section -->
+    <section class="container">
+        <h1>Nahi Lagegi Job Jao</h1>
+    </section>
+
+    <!-- JavaScript -->
+    <script type="text/javascript">
+        let menu = document.querySelector('#menu-icon');
+        let navlist = document.querySelector('.navlist');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navlist.classList.toggle('open');
+        };
+    </script>
+
+    {% comment %} <script src="{% static 'script.js' %}"></script> {% endcomment %}
+
+</body>
+
+</html>
